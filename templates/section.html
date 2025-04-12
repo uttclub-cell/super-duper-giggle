@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PPTP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+  <h3>PPTP VPN</h3>
+  <form method="post">
+    <div class="mb-3">
+      <label>IP адрес сервера</label>
+      <input type="text" name="pptp_ip" class="form-control" value="{{ ip }}">
+    </div>
+    <div class="mb-3">
+      <label>Логин</label>
+      <input type="text" name="pptp_user" class="form-control" value="{{ user }}">
+    </div>
+    <div class="mb-3">
+      <label>Пароль</label>
+      <input type="password" name="pptp_pass" class="form-control" value="{{ password }}">
+    </div>
+    <button class="btn btn-success" name="action" value="connect">Подключиться</button>
+    <button class="btn btn-danger" name="action" value="disconnect">Отключиться</button>
+  </form>
+  <hr>
+  <h5>Статус подключения:</h5>
+  <pre>{{ status }}</pre>
+  <h5>Лог:</h5>
+  <pre>{{ log }}</pre>
+  <a href="/" class="btn btn-secondary mt-3">Назад</a>
+</div>
+</body>
+</html>
